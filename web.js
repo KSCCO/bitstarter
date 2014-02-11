@@ -1,5 +1,5 @@
 var file = require("fs");
-console.log("Starting...");
+console.log("Custom Starting Log...");
 var express = require('express');
 var app = express();
 app.use(express.logger());
