@@ -1,8 +1,10 @@
+var file = require("fs");
+console.log("Starting...");
 var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var buf = fs.readFileSync("index.html");
+var buf = file.readFileSync("./index.html");
 app.get('/', function(request, response) {
   response.send(buf.toString());
 });
